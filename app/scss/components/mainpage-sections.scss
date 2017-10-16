@@ -1,0 +1,100 @@
+/* welcome and categories sections */ 
+.section-welcome,
+.section-categories{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+}
+
+/* 
+ * Section welcome 
+*/ 
+.section-welcome{
+	background: {
+		image: url('images/welcome-section-bg.jpg');
+		size: cover;
+		position: 50%;
+		repeat: no-repeat;
+	}
+
+	$offset: 30px;
+
+	&__menu-button,
+	&__current-lang,
+	&__telephone,
+	&__socials{
+		position: absolute;
+		z-index: 3;
+
+		margin: 0;
+		padding: 0;
+	}
+
+	/* menu button */ 
+	&__menu-button{
+		top: $offset; left: $offset;
+
+		background: 0;
+		border: 0;
+		outline: 0;
+		cursor: pointer;
+
+		span{
+			display: block;
+			width: 20px;
+			height: 1px;
+
+			background-color: $color-text-secondary;
+
+			&:nth-child(2){
+				margin: {
+					top: 4px;
+					bottom: 4px;
+				}
+			}
+		}
+	}
+
+	/* current lang */ 
+	&__current-lang{
+		top: $offset; right: $offset;
+
+		font-size: $font-small;
+		color: $color-text-primary;
+		text-transform: uppercase;
+	}
+
+	/* telephone */ 
+	&__telephone{
+		bottom: $offset; left: $offset;
+
+		font-size: $font-small;
+		color: $color-white;
+	}
+
+	/* socials */ 
+	&__socials{
+		bottom: $offset; right: $offset;
+
+		list-style-type: none;
+
+		li{
+			display: inline-block;
+
+			+ li{
+				margin-left: 10px;	
+			}
+		}
+
+		a{
+			text-decoration: none;
+			color: $color-text-primary;
+			transition: $text-transition;
+
+			&:hover{
+				text-decoration: none;
+				color: $color-text-secondary;
+			}
+		}
+	}
+}

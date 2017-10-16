@@ -7,7 +7,7 @@ body{
   min-height: 100vh;
 	
 	font: {
-		family: $base-font;
+		family: $font;
 		weight: 400;
 	}
 }
@@ -45,3 +45,8 @@ body{
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* close commented backslash hack */
+
+main#main-wrapper{}
+.container-wrapper{
+  // padding-left: $menu-width;
+}

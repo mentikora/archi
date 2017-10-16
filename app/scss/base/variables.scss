@@ -1,17 +1,14 @@
-$base-font: 'Open Sans', sans-serif;
+/* font */ 
+$font: 'Open Sans', sans-serif;
+$font-small: 14px;
 
-$color-primary: #fdea00;
-$color-secondary: #575756;
-$color-text: #1d1d1b;
+$color-text-primary: #393939;
+$color-text-secondary: #fec63d;
 
 $color-black: #000000;
 $color-white: #ffffff;
 
-$portfolio-item-li-bgc: #3c3c3b;
-
-$transition: all .25s cubic-bezier(0.47, 0, 0.745, 0.715);
-
-
+/* grid */ 
 $screen-sm: 576px;
 $screen-sm-max: $screen-sm - 1 ;
 $screen-md: 768px;
@@ -20,3 +17,10 @@ $screen-lg: 992px;
 $screen-lg-max: $screen-lg - 1;
 $screen-xl: 1200px;
 $screen-xl-max: $screen-xl - 1;
+
+/* menu */ 
+$menu-bg: #0a1423;
+$menu-width: 215px;
+
+/* transition*/ 
+$text-transition: .15s linear;

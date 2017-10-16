@@ -1,0 +1,11 @@
+#menu-wrapper{
+	width: $menu-width;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	
+	border-top: 1px solid #192331;
+	background-color: $menu-bg;
+}
