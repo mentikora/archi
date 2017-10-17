@@ -3,6 +3,10 @@
 */ 
 .section-categories{
 	display: flex;
+
+	@media(max-width: $screen-lg-max){
+		flex-direction: column;
+	}
 	
 	/* sides */ 
 	&__left,
@@ -46,7 +50,12 @@
 	}
 
 	&__architecrute{
-		height: 100vh;
+		@media(max-width: $screen-lg-max){
+			height: 50vh;
+		}
+		@media(min-width: $screen-lg-max){
+			height: 100vh;
+		}
 	}
 
 	&__design,
@@ -67,8 +76,14 @@
 	/* navigation */
 	&__nav{
 		position: absolute;
-		bottom: 70px; left: 70px;
 		z-index: 5;
+		
+		@media(max-width: $screen-xl-max){
+			bottom: 30px; left: 30px;
+		}
+		@media(min-width: $screen-xl){
+			bottom: 70px; left: 70px;	
+		}
 		
 		&-title{
 			margin: 0;
@@ -89,10 +104,17 @@
 			list-style-type: none;
 		}
 		li{
-			display: inline-block;
+			@media(min-width: $screen-sm){
+				display: inline-block;
+			}
 
 			+ li{ 
-				margin-left: 50px;
+				@media(min-width: $screen-sm) and (max-width: 1199px){
+					margin-left: 25px;
+				}
+				@media(min-width: 1200px){
+					margin-left: 50px;
+				}
 			}
 		}
 		a{
