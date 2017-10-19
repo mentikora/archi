@@ -23,7 +23,7 @@ $(document).ready(function (){
 
 				$(this).css('background-image', 'url("images/' + data + counter + '.jpg")');
 			});
-		}, 10000);
+		}, 8000);
 	}
 
 });
