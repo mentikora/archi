@@ -1,0 +1,23 @@
+.footer{ 
+	&__top,
+	&__bottom{
+		border-top: 1px solid #cacaca;
+	}
+
+	&__top{}
+
+	&__bottom{
+		display: flex;
+		align-items: center;
+
+		min-height: 86px;
+		
+		@media(min-width: $screen-md){
+			justify-content: space-between;	
+		}
+		@media(max-width: $screen-md-max){
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+}

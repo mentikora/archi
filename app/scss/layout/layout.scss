@@ -3,7 +3,7 @@ body{
   overflow-x: hidden;
 	
 	font: {
-		family: $font;
+		family: $font-osans;
 		weight: 400;
 	}
 
@@ -64,6 +64,12 @@ body{
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* close commented backslash hack */
+
+.img-responsive{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 main#main-wrapper{}
 .container-wrapper{

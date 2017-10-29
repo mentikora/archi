@@ -2,9 +2,15 @@
 @import "base/variables.scss";
 
 @import "layout/layout.scss";
+@import "layout/footer.scss";
 @import "layout/navigation.scss";
 
 @import "components/menu.scss";
 @import "components/mainpage-sections.scss";
 @import "components/section-welcome.scss";
 @import "components/section-categories.scss";
+
+@import "components/page-top-section.scss";
+@import "components/ck-editor.scss";
+
+@import "components/about-us-text.scss";

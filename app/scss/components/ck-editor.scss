@@ -1,0 +1,31 @@
+.ck-editor{
+
+	img{
+		@extend .img-responsive;
+	}
+
+	h2{
+		margin: 0 0 15px 0;
+		
+		color: #323232;
+		line-height: 48px;
+		font: {
+			size: 35px;
+			family: $font-raleway;
+			weight: 400;
+		}
+		text-transform: uppercase;
+	}
+
+	p{
+		margin: 0 0 10px 0;
+
+		color: #898989;
+		line-height: 30px;
+		font: {
+			size: 18px;
+			weight: 400;
+			family: $font-osans;
+		}
+	}
+}
