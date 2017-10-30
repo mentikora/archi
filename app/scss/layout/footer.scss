@@ -3,9 +3,11 @@
 	&__bottom{
 		border-top: 1px solid #cacaca;
 	}
-
+	
+	/* top */ 
 	&__top{}
-
+	
+	/* bottom */ 
 	&__bottom{
 		display: flex;
 		align-items: center;
@@ -18,6 +20,29 @@
 		@media(max-width: $screen-md-max){
 			flex-direction: column;
 			justify-content: center;
+		}
+	}
+
+	&__rights,
+	&__welldo a{
+		font-size: 16px;
+		color: #323232;
+
+		text-decoration: none;
+	}
+
+	&__welldo{
+		transition: $text-transition;
+
+		img{
+			display: inline-block;
+			position: relative;
+			top: 6px;
+			margin-left: 6px;
+		}
+
+		&:hover{
+			opacity: .81;
 		}
 	}
 }
