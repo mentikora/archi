@@ -1,11 +1,110 @@
 .footer{ 
+
+	@media(max-width: $screen-lg-max){
+		margin-top: 40px;
+	}
+	@media(min-width: $screen-lg){
+		margin-top: 80px;
+	}
+
 	&__top,
 	&__bottom{
 		border-top: 1px solid #cacaca;
 	}
 	
 	/* top */ 
-	&__top{}
+	&__top{
+		@media(max-width: $screen-lg-max){
+			padding: {
+				top: 20px;
+				bottom: 60px;
+			}
+		}
+		@media(min-width: $screen-lg){
+			padding: {
+				top: 40px;
+				bottom: 120px;
+			}
+		}
+		
+		&-title{
+			margin: 0 0 40px 0;
+
+			font: {
+				size: 38px;
+				family: $font-raleway;
+				weight: 400;
+			}
+			line-height: 48px;
+			color: $color-text-footer;
+		}
+
+		&-nav{
+
+			@extend .clearfix;
+			
+			aside{
+				@media(max-width: $screen-lg-max){
+					margin-bottom: 25px;
+				}
+				@media(min-width: $screen-lg){
+					width: calc(100% / 3);
+					float: left;
+				}
+			}
+
+			&-title{
+				margin: 0 0 20px 0;
+
+				font: {
+					size: 25px;
+					family: $font-raleway;
+					weight: 900;
+				}
+				line-height: 25px;
+				color: $color-text-footer;
+			}
+			
+			ul{
+				margin: 0; padding: 0;
+			}
+			li{
+				list-style-type: none;
+
+			  + li {
+					margin-top: 15px;
+				}
+			}
+			a{
+				position: relative;
+				padding-left: 35px;
+
+				font-size: 18px;
+				line-height: 18px;
+				color: $color-text-footer;
+				text-decoration: none;
+
+				&::before{
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					height: 1px;
+					width: 15px;
+
+					transition: $text-transition;
+
+					background-color: $color-text-footer;
+				}
+
+				&:hover:before{
+					width: 25px;
+				}
+			}
+		}
+
+	}
 	
 	/* bottom */ 
 	&__bottom{
@@ -26,7 +125,7 @@
 	&__rights,
 	&__welldo a{
 		font-size: 16px;
-		color: #323232;
+		color: $color-text-footer;
 
 		text-decoration: none;
 	}
