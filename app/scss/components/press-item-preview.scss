@@ -1,0 +1,28 @@
+.press-items-preview-wrapper{}
+
+.press-item-preview{
+	$press-gray: #898989;
+
+	text-align: center;
+
+	&__date,
+	&__magazine{
+		color: $press-gray;
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+	&__title{
+		color: $color-text-footer;
+		font: {
+			family: $font-raleway;
+			size: 35px;
+			weight: 300;
+		}
+		line-height: 48px;
+	}
+
+	&__magazine{
+		font-weight: 700;
+	}
+}

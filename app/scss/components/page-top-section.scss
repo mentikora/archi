@@ -25,6 +25,19 @@
 	&--clients{
 		background-image: url('./images/page-top-section--clients.jpg');
 	}
+	&--press{
+		background-image: url('./images/page-top-section--press.jpg');
+	}
+	&--contacts{
+		background-image: url('./images/page-top-section--contacts.jpg');
+	}
+	&--architecture{
+		background-image: url('./images/page-top-section--architecture.jpg');
+	}
+	&--architecture-object{
+		background-image: url('./images/page-top-section--architecture-object.jpg');
+	}
+
 
 	&::after{
 		content: '';
