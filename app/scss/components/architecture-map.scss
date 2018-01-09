@@ -1,0 +1,81 @@
+.architecture-object-map{
+	margin-top: 45px;
+}
+#map{
+	height: 390px;
+	margin-bottom: 35px;
+	
+	/* @TODO 
+	 * remove after map including 
+	 */ 
+	border: 1px solid #ccc;
+}
+
+.architecture-object-map__button{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	position: relative;
+	text-decoration: none;
+
+	&:hover{
+		.architecture-object-map__button-icon{
+			border: 0;
+
+			&::before{
+				opacity: 1;
+			}
+		}
+	}
+
+	&-wrapper{
+		display: flex;
+		justify-content: center;
+	}
+
+	img{
+		width: 42px;
+	}
+
+	&-icon{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		height: 120px;
+		width: 120px;
+		
+		border: {
+			radius: 50%;
+			width: 1px;
+			style: solid;
+			color: #d3d3d3
+		}
+
+		&::before{
+			content: '';
+			position: absolute;
+			top: -15px; left: 15px;
+			z-index: 2;	
+
+			border-radius: 50%;
+
+			opacity: 0;
+			transition: opacity .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			
+			width: 150px;
+			height: 150px;
+			box-shadow: 0 0 25px 0 rgba(0,0,0, .15);
+		}
+	}
+
+	&-text{
+		margin-top: 25px;
+
+		color: #0a1423;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+}

@@ -4,6 +4,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	
+	svg{
+		width: 38px;
+		fill: #c1c1c1;
+		transition: .25s linear;
+	}
+	a:hover svg{
+		fill: #323232;
+	}
 }
 
 .pagination{

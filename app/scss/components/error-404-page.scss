@@ -1,0 +1,41 @@
+.error-404-page{
+	margin-top: 100px;
+
+	@media(min-width: $screen-lg){
+		width: 50%;
+	}
+	h1{
+		margin: 0 0 15px;
+
+		font-size: 120px;
+		font-family: $font-raleway;
+		line-height: 120px;
+		color: #323232;
+	}
+	h2{
+		margin: 0 0 45px;
+
+		font-size: 35px;
+		line-height: 35px;
+		font-family: $font-raleway;
+		color: #323232;
+	}
+	p{
+		font-size: 18px;
+		line-height: 30px;
+		font-family: $font-osans;
+		color: #898989;
+	}
+	a{
+		color: #898989;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		transition: color .25s linear;
+
+		&:hover{
+			color: $color-text-secondary;
+			text-decoration: none;
+		}
+	}
+}

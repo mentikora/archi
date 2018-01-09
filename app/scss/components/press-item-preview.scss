@@ -3,7 +3,17 @@
 .press-item-preview{
 	$press-gray: #898989;
 
-	text-align: center;
+	margin-bottom: 90px;
+	
+	text: {
+		align: center;
+		decoration: none;
+	}
+	
+	&__image{
+		margin-bottom: 25px;
+		height: 500px;
+	}
 
 	&__date,
 	&__magazine{
@@ -13,13 +23,28 @@
 	}
 
 	&__title{
-		color: $color-text-footer;
+		margin: {
+			top: 15px;
+			bottom: 15px;
+		}
+
 		font: {
 			family: $font-raleway;
 			size: 35px;
 			weight: 300;
 		}
 		line-height: 48px;
+
+		a{
+			text-decoration: none;
+			color: $color-text-footer;
+
+			transition: color .25s;
+		}
+
+		&:hover a{
+			color: $color-text-secondary;
+		}
 	}
 
 	&__magazine{

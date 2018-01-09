@@ -1,0 +1,23 @@
+.architecture-object-gallery{
+	column-gap: 7px;
+	column-fill: auto; 
+	
+	@media(max-width: $screen-md-max){
+		column-count: 1;
+	}
+	@media(min-width: $screen-md) and (max-width: $screen-lg-max){
+		column-count: 2;
+	}
+	@media(min-width: $screen-lg){
+		column-count: 3;
+	}
+}
+
+.architecture-object-gallery-item{
+	display: inline-block;
+	column-break-inside: avoid;
+
+	margin-bottom: 8px;
+
+	width: 100%;
+}

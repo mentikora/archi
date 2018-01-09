@@ -8,7 +8,7 @@ $(document).ready(function (){
 	});
 
 	// change slides
-	if ( $('.section-categories') ){
+	if ( $('.section-categories').length ){
 		var counter = 1;
 
 		setInterval( function(){
