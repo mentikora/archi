@@ -16,6 +16,13 @@
 	border-top: 1px solid #192331;
 	background-color: $menu-bg;
 
+	transition: .2s linear;
+	will-change: transform;
+
+	@media(max-width: $screen-md-max){
+		left: -$menu-width;
+	}
+
 	&::-webkit-scrollbar {
     width: 2px;
 	}
@@ -27,6 +34,14 @@
 	&::-webkit-scrollbar-thumb {
 	  background-color: $color-text-secondary;
 	  outline: 1px solid slategrey;
+	}
+
+	&.hidden{
+		left: -$menu-width;
+
+		+ .container-wrapper{
+			padding-left: 0;
+		}
 	}
 }
 
@@ -132,11 +147,27 @@
 				}
 			}
 			a{
+				display: inline-block;
+				width: 20px;
+
 				text: {
 					transform: uppercase;
 					decoration: none;
 				}
 				transition: $text-transition;
+			}
+			svg{
+				display: block;
+				max-width: 100%;
+				height: auto;
+
+				fill: #fff;
+				transition: $text-transition;
+				cursor: pointer;
+
+				&:hover{
+					fill: $color-text-secondary;
+				}
 			}
 		}
 

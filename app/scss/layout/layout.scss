@@ -77,6 +77,10 @@ body{
 
 main#main-wrapper{}
 .container-wrapper{
-  padding-left: $menu-width;
+  transition: .2s linear;
+
+  @media(min-width: $screen-md){
+    padding-left: $menu-width;
+  }
 }
 

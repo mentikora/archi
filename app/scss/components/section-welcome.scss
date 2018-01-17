@@ -9,10 +9,17 @@
 		repeat: no-repeat;
 	}
 
+	@media(max-width: $screen-md-max){
+		background-position: 76% 50%;
+	}
+	@media(min-width: $screen-md){
+		background-position: 50%;
+	}
+
 	$offset: 30px;
 
 	&__menu-button,
-	&__current-lang,
+	&__lang,
 	&__telephone,
 	&__socials{
 		position: absolute;
@@ -48,12 +55,36 @@
 	}
 
 	/* current lang */ 
-	&__current-lang{
+	&__lang{
+		display: flex;
+		list-style: none;
+
 		top: $offset; right: $offset;
 
-		font-size: $font-small;
-		color: $color-text-primary;
-		text-transform: uppercase;
+		li{
+			margin-left: 15px;
+		}
+
+		a{
+			display: block;
+
+			color: $color-text-primary;
+			text: {
+				transform: uppercase;
+				decoration: none;
+			}
+			transition: $text-transition;
+			font-size: 14px;
+			line-height: 14px;
+
+			&:hover{
+				color: $color-text-secondary;
+			}
+
+			&.current{
+				font-weight: 700;
+			}
+		}
 	}
 
 	/* telephone */ 
@@ -62,6 +93,10 @@
 
 		font-size: $font-small;
 		color: $color-white;
+
+		@media(max-width: $screen-lg-max){
+			display: none;
+		}
 	}
 
 	/* socials */ 
@@ -79,14 +114,30 @@
 		}
 
 		a{
+			display: inline-block;
+			width: 20px;
+
 			text-decoration: none;
-			font-size: 18px;
 			color: $color-text-primary;
 			transition: $text-transition;
 
 			&:hover{
 				text-decoration: none;
 				color: $color-text-secondary;
+			}
+		}
+
+		svg{
+			display: block;
+			max-width: 100%;
+			height: auto;
+
+			fill: #393939;
+			transition: $text-transition;
+			cursor: pointer;
+
+			&:hover{
+				fill: $color-text-secondary;
 			}
 		}
 	}
